@@ -1,0 +1,2 @@
+get 2018 - 2015  export data
+get 2018 - 2014 naphta and sgx data years of 

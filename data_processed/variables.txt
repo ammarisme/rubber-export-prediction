@@ -1,0 +1,14 @@
+- global production volume - Q1
+- synthetic rubber price - Q2
+- (%YOY) of global GDP - Q3
+- the exchange rate between Indonesian Rupiyal and Chinese Yuan (the largest importer) - Q4
+- the exchange rate between Indonesian Rupiyal and the currency rate of the main importer of Indonesian rubber (if it is not china) - Q5
+negatively :
+- natural rubber price - Q6 (taken from the second model)
+demand formula.PNG
+Factors affecting the supply of Natural rubber
+- Price - R1
+- mature area (cultivated areas) - R2
+- rainfall - R3
+- price per a barrel of crude oil - R4
+supply formula.PNG

@@ -1,0 +1,5 @@
+var d = document.getElementById("from").value;
+var date= d.split("-");
+var f = new Date(date[2],  date[1]-1, date[0]);
+f = f.setMonth(f.getMonth() + 1)
+f.getYear()+1900+"-"+(f.getMonth()+1)+"-"+f.getDate()

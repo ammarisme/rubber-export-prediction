@@ -1,0 +1,129 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><div>
+	<table class="tblData" cellspacing="0" cellpadding="3" align="Center" rules="all" border="1" id="gvPrices" style="border-collapse:collapse;">
+		<caption>
+			Rubber vs Crude Oil (petroleum) - Price Rate of Change Comparison
+		</caption><tr style="background-color:#E5ECF9;">
+			<th scope="col">Month</th><th scope="col">Rubber Price (US Dollars per Kilogram)</th><th scope="col">Crude Oil (petroleum) Price (US Dollars per Barrel)</th><th scope="col">Rubber ROC</th><th scope="col">Crude Oil (petroleum) ROC</th><th scope="col">Rubber / Crude Oil (petroleum) Price Ratio</th>
+		</tr><tr align="right">
+			<td>Dec 2014</td><td>1.61</td><td>60.70</td><td>-</td><td>-</td><td>0.0265</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jan 2015</td><td>1.66</td><td>47.11</td><td>3.11 %</td><td>-22.39 %</td><td>0.0352</td>
+		</tr><tr align="right">
+			<td>Feb 2015</td><td>1.82</td><td>54.79</td><td>9.64 %</td><td>16.30 %</td><td>0.0332</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Mar 2015</td><td>1.74</td><td>52.83</td><td>-4.40 %</td><td>-3.58 %</td><td>0.0329</td>
+		</tr><tr align="right">
+			<td>Apr 2015</td><td>1.70</td><td>57.54</td><td>-2.28 %</td><td>8.92 %</td><td>0.0295</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>May 2015</td><td>1.84</td><td>62.51</td><td>8.22 %</td><td>8.63 %</td><td>0.0294</td>
+		</tr><tr align="right">
+			<td>Jun 2015</td><td>1.82</td><td>61.31</td><td>-1.09 %</td><td>-1.92 %</td><td>0.0297</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jul 2015</td><td>1.64</td><td>54.34</td><td>-9.89 %</td><td>-11.37 %</td><td>0.0302</td>
+		</tr><tr align="right">
+			<td>Aug 2015</td><td>1.45</td><td>45.69</td><td>-11.59 %</td><td>-15.92 %</td><td>0.0317</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Sep 2015</td><td>1.35</td><td>46.28</td><td>-6.90 %</td><td>1.29 %</td><td>0.0292</td>
+		</tr><tr align="right">
+			<td>Oct 2015</td><td>1.33</td><td>46.96</td><td>-1.48 %</td><td>1.47 %</td><td>0.0283</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Nov 2015</td><td>1.24</td><td>43.11</td><td>-6.77 %</td><td>-8.20 %</td><td>0.0288</td>
+		</tr><tr align="right">
+			<td>Dec 2015</td><td>1.27</td><td>36.57</td><td>2.42 %</td><td>-15.17 %</td><td>0.0347</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jan 2016</td><td>1.23</td><td>29.78</td><td>-3.15 %</td><td>-18.57 %</td><td>0.0413</td>
+		</tr><tr align="right">
+			<td>Feb 2016</td><td>1.27</td><td>31.03</td><td>3.25 %</td><td>4.20 %</td><td>0.0409</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Mar 2016</td><td>1.46</td><td>37.34</td><td>14.96 %</td><td>20.34 %</td><td>0.0391</td>
+		</tr><tr align="right">
+			<td>Apr 2016</td><td>1.71</td><td>40.75</td><td>17.12 %</td><td>9.13 %</td><td>0.0420</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>May 2016</td><td>1.63</td><td>45.94</td><td>-4.68 %</td><td>12.74 %</td><td>0.0355</td>
+		</tr><tr align="right">
+			<td>Jun 2016</td><td>1.49</td><td>47.69</td><td>-8.59 %</td><td>3.81 %</td><td>0.0312</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jul 2016</td><td>1.59</td><td>44.13</td><td>6.71 %</td><td>-7.46 %</td><td>0.0360</td>
+		</tr><tr align="right">
+			<td>Aug 2016</td><td>1.55</td><td>44.88</td><td>-2.52 %</td><td>1.70 %</td><td>0.0345</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Sep 2016</td><td>1.57</td><td>45.04</td><td>1.29 %</td><td>0.36 %</td><td>0.0349</td>
+		</tr><tr align="right">
+			<td>Oct 2016</td><td>1.66</td><td>49.29</td><td>5.73 %</td><td>9.44 %</td><td>0.0337</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Nov 2016</td><td>1.87</td><td>45.26</td><td>12.65 %</td><td>-8.18 %</td><td>0.0413</td>
+		</tr><tr align="right">
+			<td>Dec 2016</td><td>2.23</td><td>52.62</td><td>19.25 %</td><td>16.26 %</td><td>0.0424</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jan 2017</td><td>2.56</td><td>53.59</td><td>14.80 %</td><td>1.84 %</td><td>0.0478</td>
+		</tr><tr align="right">
+			<td>Feb 2017</td><td>2.71</td><td>54.35</td><td>5.86 %</td><td>1.42 %</td><td>0.0499</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Mar 2017</td><td>2.35</td><td>50.90</td><td>-13.28 %</td><td>-6.35 %</td><td>0.0462</td>
+		</tr><tr align="right">
+			<td>Apr 2017</td><td>2.21</td><td>52.16</td><td>-5.96 %</td><td>2.48 %</td><td>0.0424</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>May 2017</td><td>2.10</td><td>49.89</td><td>-4.98 %</td><td>-4.35 %</td><td>0.0421</td>
+		</tr><tr align="right">
+			<td>Jun 2017</td><td>1.72</td><td>46.17</td><td>-18.10 %</td><td>-7.46 %</td><td>0.0373</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jul 2017</td><td>1.75</td><td>47.66</td><td>1.74 %</td><td>3.23 %</td><td>0.0367</td>
+		</tr><tr align="right">
+			<td>Aug 2017</td><td>1.84</td><td>49.94</td><td>5.14 %</td><td>4.78 %</td><td>0.0368</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Sep 2017</td><td>1.86</td><td>52.95</td><td>1.09 %</td><td>6.03 %</td><td>0.0351</td>
+		</tr><tr align="right">
+			<td>Oct 2017</td><td>1.64</td><td>54.92</td><td>-11.83 %</td><td>3.72 %</td><td>0.0299</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Nov 2017</td><td>1.57</td><td>59.93</td><td>-4.27 %</td><td>9.12 %</td><td>0.0262</td>
+		</tr><tr align="right">
+			<td>Dec 2017</td><td>1.65</td><td>61.19</td><td>5.10 %</td><td>2.10 %</td><td>0.0270</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jan 2018</td><td>1.72</td><td>66.23</td><td>4.24 %</td><td>8.24 %</td><td>0.0260</td>
+		</tr><tr align="right">
+			<td>Feb 2018</td><td>1.72</td><td>63.46</td><td>0.00 %</td><td>-4.18 %</td><td>0.0271</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Mar 2018</td><td>1.76</td><td>64.17</td><td>2.33 %</td><td>1.12 %</td><td>0.0274</td>
+		</tr><tr align="right">
+			<td>Apr 2018</td><td>1.73</td><td>68.79</td><td>-1.70 %</td><td>7.20 %</td><td>0.0251</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>May 2018</td><td>1.70</td><td>73.43</td><td>-1.73 %</td><td>6.75 %</td><td>0.0232</td>
+		</tr><tr align="right">
+			<td>Jun 2018</td><td>1.56</td><td>71.98</td><td>-8.24 %</td><td>-1.97 %</td><td>0.0217</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jul 2018</td><td>1.47</td><td>72.67</td><td>-5.77 %</td><td>0.96 %</td><td>0.0202</td>
+		</tr><tr align="right">
+			<td>Aug 2018</td><td>1.47</td><td>71.08</td><td>0.00 %</td><td>-2.19 %</td><td>0.0207</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Sep 2018</td><td>1.44</td><td>75.36</td><td>-2.04 %</td><td>6.02 %</td><td>0.0191</td>
+		</tr><tr align="right">
+			<td>Oct 2018</td><td>1.43</td><td>76.73</td><td>-0.69 %</td><td>1.82 %</td><td>0.0186</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Nov 2018</td><td>1.35</td><td>62.32</td><td>-5.59 %</td><td>-18.78 %</td><td>0.0217</td>
+		</tr><tr align="right">
+			<td>Dec 2018</td><td>1.44</td><td>53.96</td><td>6.67 %</td><td>-13.41 %</td><td>0.0267</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jan 2019</td><td>1.59</td><td>56.58</td><td>10.42 %</td><td>4.86 %</td><td>0.0281</td>
+		</tr><tr align="right">
+			<td>Feb 2019</td><td>1.65</td><td>61.13</td><td>3.77 %</td><td>8.04 %</td><td>0.0270</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Mar 2019</td><td>1.72</td><td>63.79</td><td>4.24 %</td><td>4.35 %</td><td>0.0270</td>
+		</tr><tr align="right">
+			<td>Apr 2019</td><td>1.72</td><td>68.58</td><td>0.00 %</td><td>7.51 %</td><td>0.0251</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>May 2019</td><td>1.77</td><td>66.83</td><td>2.91 %</td><td>-2.55 %</td><td>0.0265</td>
+		</tr><tr align="right">
+			<td>Jun 2019</td><td>1.93</td><td>59.76</td><td>9.04 %</td><td>-10.58 %</td><td>0.0323</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Jul 2019</td><td>1.67</td><td>61.48</td><td>-13.47 %</td><td>2.88 %</td><td>0.0272</td>
+		</tr><tr align="right">
+			<td>Aug 2019</td><td>1.50</td><td>57.67</td><td>-10.18 %</td><td>-6.20 %</td><td>0.0260</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Sep 2019</td><td>1.50</td><td>60.04</td><td>0.00 %</td><td>4.11 %</td><td>0.0250</td>
+		</tr><tr align="right">
+			<td>Oct 2019</td><td>1.43</td><td>57.27</td><td>-4.67 %</td><td>-4.61 %</td><td>0.0250</td>
+		</tr><tr align="right" style="background-color:#EFEFEF;">
+			<td>Nov 2019</td><td>1.54</td><td>60.40</td><td>7.69 %</td><td>5.47 %</td><td>0.0255</td>
+		</tr>
+	</table>
+</div>

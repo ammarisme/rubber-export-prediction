@@ -1,0 +1,108 @@
+Forecasting equilibrium quantity and price on the world
+natural rubber market
+----
+
+- demand model
+positive relationship
+- world natural rubber production quantity
+- synthetic rubber price
+- percentage year of year (%YOY) of gross domestic product (GDP)
+- the exchange rate
+negative relationship
+- natural rubber price.
+
+Supply model
+- natural rubber price
+- mature area
+- rainfall
+- crude oil price
+
+Predictions (2017 - 2026)
+increase
+- production
+- %YOY of GDP
+- exchange rate
+- amount of stock
+- and the mature area
+- equilibrium quantity
+
+decrease
+- synthetic rubber price
+- urea price
+- rainfall
+- crude oil price
+- equilibriyum price
+
+primary markets (consumers)
+- China (40%)
+- Europe
+- India
+- USA
+- Japan
+
+
+Destination country weather affects the import.
+
+endogenous variables
+
+(1) quantity of natural rubber consumption (Q: 000 tonnes) on the world market
+(2) quantity of natural rubber production (Qs: 000 tonnes) on the world market
+(3) natural rubber price (NRPRICE: 000 yen) in physical market price of RSS3 (cif) on the Tokyo market
+(4) synthetic rubber price (SRPRICE: USD per tonne) on the USA market which represented the world market in this study
+(5) %YOY of GDP (YGDP: percentage) of the world
+(6) exchange rate from Chinese yuan to Thai baht (CNY: baht)
+
+(7)amount of natural rubber stock (STOCK: 000 tonnes) on the world market
+(8) mature area of natural rubber plantation in Thailand (MAREA_TH: hectares),
+(9) urea f.o.b. price (UPRICE: USD per metric tonne) in Eastern Europe
+(10) rainfall in Thailand (RAINFALL_TH: millimeters)
+(11) oil palm future price (OPPRICE: USD per metric tonne) on the Malaysian market, and 
+(12) crude oil price of petroleum (CPETRO: USD per barrel), as the simple average of three
+spot pricesdDated Brent, West Texas Intermediate, and the Dubai Fateh. 
+
+main sources of the data: 
+(1) International Rubber Study Group (IRSG) that reported
+ Q, Qs, NRPRICE, SRPRICE, STOCK and MAREA_TH
+(International Rubber Study Group, 2005, 2006, 2007,
+2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015a, 2015b,
+2016a, 2016b)
+(2) IndexMundi website that reported
+UPRICE, CPETRO and OPPRICE (IndexMundi, 1987e2015),
+(3) Thomson Reuters (2000e2021) reported YGDP
+(4) Bank of Thailand presented CNY (Bank of Thailand, 2004e2015),
+and 
+(5) Meteorological Department of Thailand reported RAINFALL_TH (Meteorological Department of Thailand
+2004e2015). 
+
+For YGDP from the Data Stream Database, the data were transformed from quarterly data to monthly
+data using the moving average technique.
+
+e three-stage least square (3SLS) 
+
+
+Qt ¼ a0 þ a1Qst þ a2NRPRICEt þ a3SRPRICEt
+þ a4YGDPt þ a5CNYt þ ε1t
+
+Qt ¼ b0 þ b1NRPRICEt þ b2STOCKt þ b3MAREA THt
+þ b4UPRICEt þ b5RAINFALL THt þ b6OPPRICEt
+þ b7CPETROt þ ε2t
+
+
+coefficient sign estimation
+palm oil, which is an important alternative crop of natural rubber
+
+Augmented DickeyeFuller (ADF) test - non-stationary at the 5 percent significance level
+Each variable has a significance level. Coefficient significance level.
+
+The root mean square error, which shows the accuracy of the demand equation,
+was calculated as 0.09. The R-square value was calculated
+as 0.54, which showed the goodness of fit of the demand
+model. This demand model was significant at t
+
+This supply model was
+significant at the 5 percent level.
+
+Explanatory Variables Forecast
+e automotive business, especially in tires, so
+automotive business sluggishness results in only a slight
+increase in natural rubber demand on the world market
