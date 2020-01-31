@@ -1,0 +1,310 @@
+<div class="animated fadeIn">
+  <div class="row">
+  <div class="col-sm-6">
+    <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="ccmonth">Commodity</label>
+          <select class="form-control" id="ccmonth">
+            <option>Natural Rubber</option>
+            <option>Iron ore</option>
+          </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="ccmonth">Route</label>
+        <select class="form-control" id="ccmonth">
+          <option>Jambi - Melbourne</option>
+          <option>Jambi - Guanzhou</option>
+        </select>
+      </div>
+    </div>
+      <div class="card col-sm-12">
+
+        <div class="card-header">
+          Trade Volume Forecast - Route : Melbourne / Commodity : N. Rubber
+          <div class="card-header-actions">
+            <a href="http://www.chartjs.org">
+              <small class="text-muted">-</small>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColours"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="ccmonth">Year/Month</label>
+          <select class="form-control" id="ccmonth">
+            <option>2020/Jan</option>
+            <option>2020/Feb</option>
+            <option>2020/Mar</option>
+            <option>2020/Apr</option>
+            <option>2020/May</option>
+            <option>2020/Jun</option>
+            <option>2020/Jul</option>
+            <option>2020/Aug</option>
+            <option>2020/Sep</option>
+            <option>2020/Oct</option>
+            <option>2020/Nov</option>
+            <option>2020/Dec</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-6">
+          <label for="ccmonth">Commodity</label>
+          <select class="form-control" id="ccmonth">
+            <option>Natural Rubber</option>
+            <option>Iron ore</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card col-sm-12">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Upcoming routes - Natural Rubber / Jan
+        </div>
+        <div class="card-body">
+          <table class="table table-sm">
+            <thead>
+            <tr>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Time</th>
+              <th>Volume (TEUs)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Jambi</td>
+              <td>Melbourne</td>
+              <td>June/2020</td>
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>Jambi</td>
+              <td>Guangzhou</td>
+              <td>June/2020</td>
+              <td>800</td>
+            </tr>
+            <tr>
+              <td>S. Sumatra</td>
+              <td>Auckland</td>
+              <td>May</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>W. Kalimantan</td>
+              <td>Cape Town</td>
+              <td>May</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>S. Sumatra</td>
+              <td>Brazil</td>
+              <td>May</td>
+              <td>1500</td>
+            </tr>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="ccmonth">Commodity</label>
+          <select class="form-control" id="ccmonth">
+            <option>Natural Rubber</option>
+            <option>Iron ore</option>
+          </select>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          Estimated Trade Volume
+        </div>
+        <div class="card-body">
+          <table class="table table-sm">
+            <thead class="thead-light">
+            <tr>
+              <th>Supplier</th>
+              <th>Estimated Volume</th>
+              <th>Completed</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <div>Astra Agro Lestari</div>
+                <div class="small text-muted">
+                    Reg No. 2452
+                </div>
+              </td>
+              <td class="text-center">
+                100,000
+              </td>
+              <td>
+                <div class="clearfix">
+                  <div class="float-left">
+                    <strong>50%</strong>
+                  </div>
+                  <div class="float-right">
+                    <small class="text-muted">Apr 1 2020 - Mar 31, 2021</small>
+                  </div>
+                </div>
+                <div class="progress progress-xs">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>Akbar Indo Makmur Stimec</div>
+                <div class="small text-muted">
+                  <span>New</span> | Reg No. 2333
+                </div>
+              </td>
+              <td class="text-center">
+                80,000
+              </td>
+              <td>
+                <div class="clearfix">
+                  <div class="float-left">
+                    <strong>40%</strong>
+                  </div>
+                  <div class="float-right">
+                    <small class="text-muted">Apr 1 2020 - Mar 31, 2021</small>
+                  </div>
+                </div>
+                <div class="progress progress-xs">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>Bakrie Sumatera Plantations</div>
+                <div class="small text-muted">
+                  <span>New</span> | Reg No. 2343
+                </div>
+              </td>
+              <td class="text-center">
+                150,000
+              </td>
+              <td>
+                <div class="clearfix">
+                  <div class="float-left">
+                    <strong>60%</strong>
+                  </div>
+                  <div class="float-right">
+                    <small class="text-muted">Apr 1 2020 - Mar 31, 2021</small>
+                  </div>
+                </div>
+                <div class="progress progress-xs">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>Indofood Sukses Makmur</div>
+                <div class="small text-muted">
+                  <span>New</span> | Reg No. 3532
+                </div>
+              </td>
+              <td class="text-center">
+                100,000
+              </td>
+              <td>
+                <div class="clearfix">
+                  <div class="float-left">
+                    <strong>48%</strong>
+                  </div>
+                  <div class="float-right">
+                    <small class="text-muted">Apr 1 2020 - Mar 31, 2021</small>
+                  </div>
+                </div>
+                <div class="progress progress-xs">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 48%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card text-white bg-primary">
+            <div class="card-body pb-0">
+              <div class="btn-group float-right" dropdown>
+                <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
+                  <i class="icon-settings"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+                  <a class="dropdown-item" href="#">Natural Rubber</a>
+                  <a class="dropdown-item" href="#">Iron ore</a>
+                </div>
+              </div>
+              <div class="text-value">910,100.823</div>
+              <div>Freight Rate per TEU - N. Rubber</div>
+            </div>
+            <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+              <canvas baseChart class="chart"
+                      [datasets]="lineChart1Data"
+                      [labels]="lineChart1Labels"
+                      [options]="lineChart1Options"
+                      [colors]="lineChart1Colours"
+                      [legend]="lineChart1Legend"
+                      [chartType]="lineChart1Type"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="h1 text-muted text-right mb-4">
+                <i class="icon-pie-chart"></i>
+              </div>
+              <div class="h4 mb-0">28%</div>
+              <small class="text-muted text-uppercase font-weight-bold">Vessel Utilization : Rubber</small>
+              <div class="progress progress-xs mt-3 mb-0">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,5 @@
+Possible variables
+
 - global production volume - Q1
 - synthetic rubber price - Q2
 - (%YOY) of global GDP - Q3
@@ -11,4 +13,3 @@ Factors affecting the supply of Natural rubber
 - mature area (cultivated areas) - R2
 - rainfall - R3
 - price per a barrel of crude oil - R4
-supply formula.PNG
