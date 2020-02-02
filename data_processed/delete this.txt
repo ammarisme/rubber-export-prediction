@@ -1,0 +1,207 @@
+<tr>
+<td>4006 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>Ramadan Days</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4008 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4003 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>Rainfall (Prev.)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4015 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>RSS3 High</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>RSS3 Low</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4009 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>IDN/USD Rate</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>TSR20 Change</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4017 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>Temperature (C)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4007 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>IDN/USD Chg(%)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>RSS3 Open (Prev.)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4010 Volume(Tons)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>TSR20 High ($)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>RSS3 Chg(%)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4002 Volume(T)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>Chinese Imports(T)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4013 Volume(T)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>TSR20 Low (Prev.)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4011 Volume(T)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>IDN/USD Chg(%)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>Crude Oil Price(B.)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>RSS3 Price (Prev)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4012 Volume(T)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>TSR20 Volume (KG.)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4005 Volume(T)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>4004 Volume(T)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>TSR20 Price (Prev.)</td>
+<td>
+<td>
+<td>
+</tr>
+<tr>
+<td>Planted Area(Ha)</td>
+</tr>
+<tr>
+<td>Oil Price Chg(%.)</td>
+</tr>
+<tr>
+<td>4014 Volume (KG.)</td>
+</tr>
+<tr>
+<td>4005 Volume(T)</td>
+</tr>
+<tr>
+<td>TSR20 High ($)</td>
+</tr>
