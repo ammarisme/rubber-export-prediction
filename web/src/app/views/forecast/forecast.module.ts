@@ -10,8 +10,8 @@ import {ForecastAdjustComponent} from './forecast-adjust/forecast-adjust.compone
 import {CollapseModule, ProgressbarModule} from 'ngx-bootstrap';
 import {ForecastExploreComponent} from './forecast-explore/forecast-explore.component';
 import {NgbModalBackdrop} from '@ng-bootstrap/ng-bootstrap/modal/modal-backdrop';
-import {ForecastVariableComponent} from './forecast-variable/forecast-variable.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ForecastVariableComponent} from './forecast-variable/forecast-explore.component';
 
 @NgModule({
   imports: [
