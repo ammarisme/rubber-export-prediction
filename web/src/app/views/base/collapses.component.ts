@@ -11,10 +11,12 @@ export class CollapsesComponent {
 
   collapsed(event: any): void {
     // console.log(event);
+    event.preventDefault();
   }
 
   expanded(event: any): void {
     // console.log(event);
+    event.preventDefault();
   }
 
 }

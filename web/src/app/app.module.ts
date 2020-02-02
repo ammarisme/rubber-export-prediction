@@ -40,6 +40,8 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import {ForecastAdjustComponent} from './views/forecast/forecast-adjust/forecast-adjust.component';
+import {ForecastModule} from './views/forecast/forecast.module';
 
 @NgModule({
   imports: [
@@ -54,7 +56,8 @@ import { ChartsModule } from 'ng2-charts';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    ForecastModule
   ],
   declarations: [
     AppComponent,

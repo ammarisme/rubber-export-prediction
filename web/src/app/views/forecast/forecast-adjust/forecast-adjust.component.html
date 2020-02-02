@@ -1,0 +1,410 @@
+<div class="animated fadeIn">
+  <div class="row">
+  <div class="col-sm-8">
+      <div class="card col-sm-12" style="padding-bottom: 20px;">
+
+        <div class="card-header">
+          Export Volume Forecast - Country : Indonesia : N. Rubber
+          <div class="card-header-actions">
+            <a href="http://www.chartjs.org">
+              <small class="text-muted">-</small>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+                    [datasets]="chart.lineChartData"
+                    [labels]="chart.lineChartLabels"
+                    [options]="chart.lineChartOptions"
+                    [colors]="chart.lineChartColours"
+                    [legend]="chart.lineChartLegend"
+                    [chartType]="chart.lineChartType"
+                    (chartHover)="chart.chartHovered($event)"
+                    (chartClick)="chart.chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="col-sm-4">
+      <div class="row">
+        <div class="col-sm-4" style="text-align: right;padding: 6px;">
+          <label for="ccmonth">Year/Month</label>
+        </div>
+        <div class="col-sm-8">
+          <select class="form-control" id="ccmonth">
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2014</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option>2011</option>
+            <option>2010</option>
+            <option>2009</option>
+            <option>2008</option>
+            <option>2007</option>
+          </select>
+        </div>
+      </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="h4 m-0">Annual Forecast : 3.23T [3340 TEU(s)]</div>
+        <div>Exported so far : <strong>0.9T [340 TEU(s)]</strong> </div>
+        <div class="progress progress-xs my-3">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <small class="text-muted">Achievement : <strong>23.5%</strong> </small>
+
+        <div class="h4 m-0">Adjusted Annual: 3.53T [3540 TEU(s)]</div>
+        <div class="row col-lg-12">
+          <progressbar class="progress" [value]="stacked" [max]="100"></progressbar>
+        </div>
+
+        <br/>
+        <div>Year-on-Year : <strong>25%</strong> </div>
+        <div class="row col-lg-12">
+          <progressbar class="progress" [value]="stacked1" [max]="100"></progressbar>
+        </div>
+
+        <div>Month-on-Month: <strong>-58%</strong> </div>
+        <div class="row col-lg-12">
+          <progressbar class="progress" [value]="stacked2" [max]="100"></progressbar>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="animated fadeIn">
+        <div class="card">
+          <div class="card-header">
+            Primary Factors
+            <div class="card-header-actions">
+              <a href="#" (click)="collapseClicked($event)" target="_blank">
+                <small className="text-muted">{{isCollapsed?'Show more' : 'Show less'}}</small>
+              </a>
+            </div>
+          </div>
+          <div class="card-body"
+               (collapsed)="collapsed($event)"
+               (expanded)="expanded($event)"
+               [collapse]="isCollapsed">
+            <div class="row">
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4006 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">Ramadan Days</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4008 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4003 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">Rainfall (Prev.)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4015 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label class="col-form-label" for="appendedPrependedInput">RSS3 High</label>
+                  <div class="controls">
+                    <div class="input-prepend input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                      <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label class="col-form-label" for="appendedPrependedInput">RSS3 Low</label>
+                  <div class="controls">
+                    <div class="input-prepend input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                      <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4009 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">IDN/USD Rate</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">TSR20 Change</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="animated fadeIn">
+        <div class="card">
+          <div class="card-header">
+            Secondary Factors
+            <div class="card-header-actions">
+              <a href="#" (click)="SecondarycollapseClicked($event)" target="_blank">
+                <small className="text-muted">{{SecondaryisCollapsed?'Show more' : 'Show less'}}</small>
+              </a>
+            </div>
+          </div>
+          <div class="card-body"
+               (collapsed)="Secondarycollapsed($event)"
+               (expanded)="Secondaryexpanded($event)"
+               [collapse]="SecondaryisCollapsed">
+            <div class="row">
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4017 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">Temperature (C)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4007 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">IDN/USD Chg(%)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">RSS3 Open (Prev.)</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4010 Volume(Tons)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">TSR20 High ($)</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="animated fadeIn">
+        <div class="card">
+          <div class="card-header">
+            Tertiary Factors
+            <div class="card-header-actions">
+              <a href="#" (click)="TertiarycollapseClicked($event)" target="_blank">
+                <small className="text-muted">{{TertiaryisCollapsed?'Show more' : 'Show less'}}</small>
+              </a>
+            </div>
+          </div>
+          <div class="card-body"
+               (collapsed)="Tertiarycollapsed($event)"
+               (expanded)="Tertiaryexpanded($event)"
+               [collapse]="TertiaryisCollapsed">
+            <div class="row">
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">RSS3 Chg(%)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4002 Volume(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">Chinese Imports(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4013 Volume(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">TSR20 Low (Prev.)</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4011 Volume(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">IDN/USD Chg(%)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">Crude Oil Price(B.)</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">RSS3 Price (Prev)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4012 Volume(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">TSR20 Volume (KG.)</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4005 Volume(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4004 Volume(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">TSR20 Price (Prev.)</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">Planted Area(Ha)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">Oil Price Chg(%.)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4014 Volume (KG.)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">4005 Volume(T)</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label class="col-form-label" for="appendedPrependedInput">TSR20 High ($)</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-10"></div>
+        <div class="col-md-2" style="margin-bottom: 10px;">
+          <button type="button" class="btn btn-block btn-primary form-control">Adjust</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

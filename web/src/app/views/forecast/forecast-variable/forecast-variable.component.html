@@ -1,0 +1,141 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card col-sm-12" style="padding-bottom: 20px;">
+
+        <div class="card-header">
+          Rainfall vs Export Volume : 2020
+          <div class="card-header-actions">
+            <a href="http://www.chartjs.org">
+              <small class="text-muted">-</small>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+                    [datasets]="chart.lineChartData"
+                    [labels]="chart.lineChartLabels"
+                    [options]="chart.lineChartOptions"
+                    [colors]="chart.lineChartColours"
+                    [legend]="chart.lineChartLegend"
+                    [chartType]="chart.lineChartType"
+                    (chartHover)="chart.chartHovered($event)"
+                    (chartClick)="chart.chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="h4 m-0">Year-on-Year Average : 240 mm</div>
+          <div>Recorded so far : <strong>200 mm</strong> </div>
+          <div class="progress progress-xs my-3">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <small class="text-muted">Percentage : <strong>80.5%</strong> </small>
+
+          <br/>
+          <div>Year-on-Year : <strong>25%</strong> </div>
+          <div class="row col-lg-12">
+            <progressbar class="progress" [value]="stacked1" [max]="100"></progressbar>
+          </div>
+
+          <div>Month-on-Month: <strong>-58%</strong> </div>
+          <div class="row col-lg-12">
+            <progressbar class="progress" [value]="stacked2" [max]="100"></progressbar>
+          </div>
+          <small class="text-muted">Category : <strong>NR Production Market</strong> </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> Related factors
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Significance</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>4006 Volume(Tons)</td>
+            <td>1000</td>
+            <td>	99.99	</td>
+            <td>
+              <button class="btn badge badge-success" (click)="open(content)"  >View</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Ramadan Days</td>
+            <td>1000</td>
+            <td>	99.999459	</td>
+            <td>
+              <button class="btn badge badge-success" (click)="open(content)" >View</button>
+            </td>
+          </tr>
+          <tr>
+            <td>4008 Volume(Tons)</td>
+            <td>1000</td>
+            <td>	99.99825	</td>
+            <td>
+              <button class="btn badge badge-success" (click)="open(content)" >View</button>
+            </td>
+          </tr>
+          <tr>
+            <td>4003 Volume(Tons)</td>
+            <td>1000</td>
+            <td>	99.9967	</td>
+            <td>
+              <button class="btn badge badge-success" (click)="open(content)" >View</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        Contribution to the Estimate by Variables
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+          <canvas baseChart class="chart"
+                  [data]="doughnutChartData"
+                  [labels]="doughnutChartLabels"
+                  [chartType]="doughnutChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<app-forecast-variable></app-forecast-variable>-->
+
+<!--
+
+<div class="row">
+  <div class="col-md-6">
+    <button type="button" class="btn btn-block btn-primary form-control">Explore</button>
+  </div>
+</div>
+-->
