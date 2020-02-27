@@ -1,0 +1,6 @@
+var temp1 = document.getElementsByClassName("temps")
+temperatures = []
+for(var div in temp1){
+ temperatures.push(temp1[div].textContent.split("/")[0])
+}
+temperatures 
