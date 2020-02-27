@@ -1,24 +1,25 @@
 <app-header
   [navbarBrandRouterLink]="['/dashboard']"
   [fixed]="true"
-  [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'CoreUI Logo'}"
-  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
   [sidebarToggler]="'lg'"
-  [asideMenuToggler]="'lg'">
+  [asideMenuToggler]="'lg'"
+  [navbarBrandFull]="{src: 'assets/img/brand/logo.png', width: 89, height: 25, alt: 'System Logo'}"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.png', width: 30, height: 30, alt: 'System Logo'}"
+>
   <ul class="nav navbar-nav d-md-down-none">
     <li class="nav-item px-3">
-      <a class="nav-link" href="#">Dashboard</a>
+      <a class="nav-link" href="#">Forecast Dashboard</a>
     </li>
-    <li class="nav-item px-3">
+    <!--<li class="nav-item px-3">
       <a class="nav-link" href="#">Users</a>
     </li>
     <li class="nav-item px-3">
       <a class="nav-link" href="#">Settings</a>
-    </li>
+    </li>-->
   </ul>
   <ul class="nav navbar-nav ml-auto">
     <li class="nav-item d-md-down-none">
-      <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
+      <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger"></span></a>
     </li>
     <li class="nav-item d-md-down-none">
       <a class="nav-link" href="#"><i class="icon-list"></i></a>
@@ -62,7 +63,7 @@
       <li class="breadcrumb-menu d-md-down-none">
         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
           <a class="btn" href="#"><i class="icon-speech"></i></a>
-          <a class="btn" [routerLink]="['/forecast']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+          <a class="btn" [routerLink]="['/forecast/forecast']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
           <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
         </div>
       </li>

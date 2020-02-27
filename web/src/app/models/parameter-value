@@ -1,0 +1,6 @@
+export class ParameterValue{
+  value;
+  parameter;
+  year;
+  month;
+}

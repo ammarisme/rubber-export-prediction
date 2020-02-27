@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import {TimeSeriesChart} from '../time-series-chart';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {HttpServiceService} from '../../../httpservice.service';
+import {Prediction} from '../../../models/prediction-model';
 
 @Component({
   selector: 'app-forecast-variable',
@@ -15,15 +17,16 @@ export class ForecastVariableComponent implements OnInit {
   stacked1: any[] = [];
   stacked2: any[] = [];
 
+  @Input() parameter;
+  @Input() predictions : Prediction[];
+
   isCollapsed: boolean = false;
   SecondaryisCollapsed: boolean = true;
   TertiaryisCollapsed: boolean = true;
 
-
   closeResult: string;
 
-  constructor(private modalService: NgbModal) {}
-
+  constructor(private httpService: HttpServiceService) {}
 
   ngOnInit(): void {
     this.chart = new TimeSeriesChart();
@@ -65,89 +68,27 @@ export class ForecastVariableComponent implements OnInit {
         ], label: 'Export Volume' ,
         lineTension: 0
       }]);
-  }
 
+    this.httpService.getParameterValuesForYear(this.parameter.parameter, this.parameter.year).subscribe(result => {
+      let y_values = [];
+      let yhat = [];
 
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title', size: 'xl'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }
-  SecondarycollapseClicked(event){
-    this.SecondaryisCollapsed = !this.SecondaryisCollapsed
-    event.preventDefault();
-  }
-  Secondarycollapsed(event: any): void {
-    // console.log(event);
-  }
+      if(result.data){
+        for(let id in result.data){
+          y_values.push(result.data[id].value_std);
+        }
 
-  Secondaryexpanded(event: any): void {
-    // console.log(event);
-  }
+        for(let id in this.predictions){
+          yhat.push(this.predictions[id].fitted_std);
+        }
 
-  TertiarycollapseClicked(event){
-    this.TertiaryisCollapsed = !this.TertiaryisCollapsed
-    event.preventDefault();
-  }
-  Tertiarycollapsed(event: any): void {
-    // console.log(event);
-  }
+        this.chart.lineChartData = [{data: y_values, label: this.parameter.parameter,
+          lineTension: 0
+        } , {data: yhat, label: 'Export Volume Forecast' ,
+          lineTension: 0
+        }];
+      }
+    })
 
-  Tertiaryexpanded(event: any): void {
-    // console.log(event);
   }
-  collapseClicked(event){
-    this.isCollapsed = !this.isCollapsed
-    event.preventDefault();
-  }
-  collapsed(event: any): void {
-    // console.log(event);
-  }
-
-  expanded(event: any): void {
-    // console.log(event);
-  }
-
-  randomStacked(): void {
-    const types = ['success', 'info', 'warning', 'danger'];
-
-    this.stacked = [];
-    const n = Math.floor(Math.random() * 4 + 1);
-    for (let i = 0; i < n; i++) {
-      const index = Math.floor(Math.random() * 4);
-      const value = Math.floor(Math.random() * 27 + 3);
-      this.stacked.push({
-        value,
-        type: types[index],
-        label: value + ' %'
-      });
-    }
-  }
-
-
-  // Doughnut
-  public doughnutChartLabels: string[] = ['4006 Volume(Tons)', 'Ramadan Days', 'Rainfall (Prev.)'];
-  public doughnutChartData: number[] = [350, 450, 100];
-  public doughnutChartType = 'doughnut';
-
-  // events
-  public chartClicked(e: any): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any): void {
-    console.log(e);
-  }
-
 }

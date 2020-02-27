@@ -3,6 +3,9 @@ import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import {TimeSeriesChart} from '../time-series-chart';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {HttpServiceService} from '../../../httpservice.service';
+import {ForecastVariableComponent} from '../forecast-variable/forecast-explore.component';
+import {Prediction} from '../../../models/prediction-model';
 
 @Component({
   templateUrl: './forecast-explore.component.html'
@@ -14,6 +17,7 @@ export class ForecastExploreComponent implements OnInit {
   stacked1: any[] = [];
   stacked2: any[] = [];
 
+
   isCollapsed: boolean = false;
   SecondaryisCollapsed: boolean = true;
   TertiaryisCollapsed: boolean = true;
@@ -21,23 +25,96 @@ export class ForecastExploreComponent implements OnInit {
 
   closeResult: string;
 
-  constructor(private modalService: NgbModal) {}
+  public parametersForTheMonth = [];
+  public thisYearsPrediction : Prediction[] = [];
+  public selectedYear : string;
+  annualForecastTotal = 0;
+  exportedSoFar = 0;
+  systemMonth = "Feb";
+  systemYear = "2020";
 
+  constructor(private modalService: NgbModal, private httpService: HttpServiceService) {}
 
   ngOnInit(): void {
     this.chart = new TimeSeriesChart();
+    this.chart.onclickFunc = this.monthClicked;
+    this.chart.selectedYear = this.selectedYear;
+
     this.stacked = [{value: 15, type: 'success', label: '15 %' ,}, {value: 26, type: 'warning', label: '26 %'}];
     this.stacked1 = [{value: 25, type: 'success', label: '25 %' ,}, {value: 20, type: 'warning', label: '20%'}];
     this.stacked2  = [{value: 35, type: 'success', label: '35 %' ,}, {value: 16, type: 'warning', label: '16 %'}];
+
+    this.selectedYear = "2020";
+    this.onYearChange(null);
+
   }
 
+  monthClicked(evt, datapoints, _this, selectedYear){
 
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title' , size : 'xl'}).result.then((result) => {
+    if(evt.active && evt.active.length > 0){
+      let index = evt.active[0]._index;
+      let month = "Jan";
+      switch (index){
+        case 0 :
+          month = "Jan";
+          break
+        case 1 :
+          month = "Feb";
+          break
+        case 2 :
+          month = "Mar";
+          break
+        case 3 :
+          month = "Apr";
+          break
+        case 4 :
+          month = "May";
+          break
+        case 5 :
+          month = "Jun";
+          break
+        case 6 :
+          month = "Jul";
+          break
+        case 7 :
+          month = "Aug";
+          break
+        case 8 :
+          month = "Sep";
+          break
+        case 9 :
+          month = "Oct";
+          break
+        case 10 :
+          month = "Nov";
+          break
+        case 11 :
+          month = "Dec";
+          break
+        default :
+      }
+      _this.httpService.getParameterValuesForMonth(selectedYear, month).subscribe(response => {
+        if(response.data){
+          _this.parametersForTheMonth =  response.data ;
+
+        }
+      });
+
+    }
+  }
+
+  open(content, parameter) {
+    content.parameter = parameter;
+    let modalRef = this.modalService.open(ForecastVariableComponent, {ariaLabelledBy: 'modal-basic-title' , size : 'xl'})
+
+    modalRef.result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
+
+    (<ForecastVariableComponent> modalRef.componentInstance).parameter = parameter;
+    (<ForecastVariableComponent> modalRef.componentInstance).predictions = this.thisYearsPrediction;
   }
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
@@ -114,4 +191,47 @@ export class ForecastExploreComponent implements OnInit {
     console.log(e);
   }
 
+  onYearChange(event){
+    this.httpService.getPredictions(this.selectedYear.toString()).subscribe(result => {
+      let y_values = [];
+      let yhat = [];
+
+
+      let total = 0;
+      let soFar = 0;
+      let soFarDone = false;
+      if(result.data){
+        for(let id in result.data){
+          y_values.push(result.data[id].actual);
+          yhat.push(result.data[id].fitted);
+          total += parseInt(result.data[id].fitted);
+
+          if(!soFarDone){
+            if(result.data[id].month == this.systemMonth){
+              soFarDone = true;
+            }else {
+              soFar += parseInt(result.data[id].fitted);
+            }
+          }
+        }
+        this.chart.lineChartData = [{data: y_values, label: 'Actual',
+          lineTension: 0
+        } , {data: yhat, label: 'Export Volume Forecast' ,
+          lineTension: 0
+        }];
+      }
+
+      debugger;
+      this.annualForecastTotal = total;
+      this.exportedSoFar = this.systemYear == this.selectedYear ? soFar : total;
+
+      this.thisYearsPrediction = result.data;
+
+      this.httpService.getParameterValuesForMonth(this.selectedYear, "Jan").subscribe(response => {
+        if(response.data){
+          this.parametersForTheMonth =  response.data ;
+        }
+      })
+    });
+  }
 }

@@ -10,8 +10,12 @@ import {ForecastAdjustComponent} from './forecast-adjust/forecast-adjust.compone
 import {CollapseModule, ProgressbarModule} from 'ngx-bootstrap';
 import {ForecastExploreComponent} from './forecast-explore/forecast-explore.component';
 import {NgbModalBackdrop} from '@ng-bootstrap/ng-bootstrap/modal/modal-backdrop';
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ForecastVariableComponent} from './forecast-variable/forecast-explore.component';
+import {HttpServiceService} from '../../httpservice.service';
+import {HttpClientModule} from '@angular/common/http';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
@@ -23,7 +27,9 @@ import {ForecastVariableComponent} from './forecast-variable/forecast-explore.co
     ProgressbarModule.forRoot(),
     ProgressbarModule,
     CollapseModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    CommonModule
   ],
   declarations: [
     ForecastComponent,
@@ -34,6 +40,9 @@ import {ForecastVariableComponent} from './forecast-variable/forecast-explore.co
   entryComponents : [
     ForecastVariableComponent,
     ForecastExploreComponent
+  ],
+  providers : [
+    HttpServiceService
   ]
 })
 export class ForecastModule { }

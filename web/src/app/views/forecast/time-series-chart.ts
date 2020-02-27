@@ -1,6 +1,12 @@
+import {Input} from '@angular/core';
+import {HttpServiceService} from '../../httpservice.service';
+
 export class TimeSeriesChart{
 
-  constructor(){
+  @Input() onclickFunc;
+  @Input() selectedYear;
+
+  constructor(private httpService: HttpServiceService){
     this.lineChartColours = this.customColors;
   }
 
@@ -42,7 +48,8 @@ export class TimeSeriesChart{
   public lineChartOptions: any = {
     animation: true,
     responsive: true,
-    bezierCurve: false
+    bezierCurve: false,
+    onClick: this.onclickFunc
   };
   public lineChartColours: Array<any> = [
   ];

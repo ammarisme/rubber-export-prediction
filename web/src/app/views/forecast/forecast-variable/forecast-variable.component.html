@@ -4,7 +4,7 @@
       <div class="card col-sm-12" style="padding-bottom: 20px;">
 
         <div class="card-header">
-          Rainfall vs Export Volume : 2020
+          {{parameter.parameter}} vs Export Volume : {{parameter.year}}
           <div class="card-header-actions">
             <a href="http://www.chartjs.org">
               <small class="text-muted">-</small>
@@ -103,28 +103,6 @@
             </td>
           </tr>
         </table>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card">
-      <div class="card-header">
-        Contribution to the Estimate by Variables
-        <div class="card-header-actions">
-          <a href="http://www.chartjs.org">
-            <small class="text-muted">docs</small>
-          </a>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="chart-wrapper">
-          <canvas baseChart class="chart"
-                  [data]="doughnutChartData"
-                  [labels]="doughnutChartLabels"
-                  [chartType]="doughnutChartType"
-                  (chartHover)="chartHovered($event)"
-                  (chartClick)="chartClicked($event)"></canvas>
-        </div>
       </div>
     </div>
   </div>

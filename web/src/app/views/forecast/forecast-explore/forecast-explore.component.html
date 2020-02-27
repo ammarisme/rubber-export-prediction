@@ -21,7 +21,7 @@
                     [legend]="chart.lineChartLegend"
                     [chartType]="chart.lineChartType"
                     (chartHover)="chart.chartHovered($event)"
-                    (chartClick)="chart.chartClicked($event)"></canvas>
+                    (chartClick)="chart.onclickFunc($event, chart.lineChartData[1].data, this, selectedYear)"></canvas>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
           <label for="ccmonth">Year/Month</label>
         </div>
         <div class="col-sm-8">
-          <select class="form-control" id="ccmonth">
+          <select class="form-control" (change)="onYearChange($event)" [(ngModel)]="selectedYear" id="ccmonth">
             <option>2020</option>
             <option>2019</option>
             <option>2018</option>
@@ -52,12 +52,12 @@
       </div>
     <div class="card">
       <div class="card-body">
-        <div class="h4 m-0">Annual Forecast : 3.23T [3340 TEU(s)]</div>
-        <div>Exported so far : <strong>0.9T [340 TEU(s)]</strong> </div>
+        <div class="h4 m-0">Annual Forecast : {{(annualForecastTotal/1000) | number: '.2'}} T [{{(annualForecastTotal/(19.2*1000)) | number: '.2'}}  TEU(s)]</div>
+        <div>Exported so far : <strong>{{(exportedSoFar/1000) | number: '.2'}} [ {{(exportedSoFar/(19.2*1000)) | number: '.2'}}  TEU(s)]</strong> </div>
         <div class="progress progress-xs my-3">
-          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar bg-success" role="progressbar" style="{{'width: ' + ((100*exportedSoFar/annualForecastTotal)).toFixed(2)+'%'}}}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <small class="text-muted">Achievement : <strong>23.5%</strong> </small>
+        <small class="text-muted">Achievement : <strong>{{(100*(exportedSoFar/annualForecastTotal)).toFixed(2)+'%'}}</strong> </small>
 
         <br/>
         <div>Year-on-Year : <strong>25%</strong> </div>
@@ -81,7 +81,7 @@
 </div>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-8">
     <div class="card">
       <div class="card-header">
         <i class="fa fa-align-justify"></i> Factors
@@ -97,68 +97,12 @@
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>4006 Volume(Tons)</td>
-            <td>1000</td>
-            <td>	99.99	</td>
+          <tr *ngFor="let parameter of parametersForTheMonth">
+            <td>{{parameter.parameter}}</td>
+            <td>{{parameter.value}}</td>
+            <td>	-	</td>
             <td>
-              <button class="btn badge badge-success" (click)="open(content)"  >View</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Ramadan Days</td>
-            <td>1000</td>
-            <td>	99.999459	</td>
-            <td>
-              <button class="btn badge badge-success" (click)="open(content)" >View</button>
-            </td>
-          </tr>
-          <tr>
-            <td>4008 Volume(Tons)</td>
-            <td>1000</td>
-            <td>	99.99825	</td>
-            <td>
-              <button class="btn badge badge-success" (click)="open(content)" >View</button>
-            </td>
-          </tr>
-          <tr>
-            <td>4003 Volume(Tons)</td>
-            <td>1000</td>
-            <td>	99.9967	</td>
-            <td>
-              <button class="btn badge badge-success" (click)="open(content)" >View</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Rainfall (Prev.)</td>
-            <td>1000</td>
-            <td>	99.99423	</td>
-            <td>
-              <button class="btn badge badge-success" (click)="open(content)" >View</button>
-            </td>
-          </tr>
-          <tr>
-            <td>4015 Volume(Tons)</td>
-            <td>1000</td>
-            <td>	99.98	</td>
-            <td>
-              <button class="btn badge badge-success" (click)="open(content)" >View</button>
-            </td>
-          </tr>
-          <tr>
-            <td>RSS3 High</td>
-            <td>1000</td>
-            <td>	99.94	</td>
-            <td>
-              <button class="btn badge badge-success" (click)="open(content)" >View</button>
-            </td>
-          </tr>
-          <tr>
-            <td>RSS3 Low</td>
-            <td>1000</td>
-            <td>	99.66	</td>
-            <td>
-              <button class="btn badge badge-success" (click)="open(content)" >View</button>
+              <button class="btn badge badge-success" (click)="open(content, parameter)"  >View</button>
             </td>
           </tr>
           </tbody>
@@ -176,7 +120,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-header">
         Contribution to the Estimate by Variables

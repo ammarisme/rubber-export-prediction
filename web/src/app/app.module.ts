@@ -42,6 +42,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import {ForecastAdjustComponent} from './views/forecast/forecast-adjust/forecast-adjust.component';
 import {ForecastModule} from './views/forecast/forecast.module';
+import {HttpServiceService} from './httpservice.service';
 
 @NgModule({
   imports: [
@@ -69,8 +70,10 @@ import {ForecastModule} from './views/forecast/forecast.module';
   ],
   providers: [{
     provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+    useClass: HashLocationStrategy,
+  },
+  HttpServiceService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

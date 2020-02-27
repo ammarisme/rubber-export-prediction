@@ -12,7 +12,12 @@ import {ForecastAdjustComponent} from './views/forecast/forecast-adjust/forecast
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'forecast/forecast',
+    pathMatch: 'full',
+  },
+  {
+    path: 'dashboard',
+    redirectTo: 'forecast/forecast',
     pathMatch: 'full',
   },
   {
