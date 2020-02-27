@@ -1,32 +1,22 @@
 const mongoose = require("../database");
 const schema = {
-  name: { type: mongoose.SchemaTypes.String, required: true },
-  email: { type: mongoose.SchemaTypes.String, required: true },
-  password: {
+  actual: { type: mongoose.SchemaTypes.String, required: true },
+  fitted: { type: mongoose.SchemaTypes.String, required: true },
+  actual_std: { type: mongoose.SchemaTypes.String, required: true },
+  fitted_std: { type: mongoose.SchemaTypes.String, required: true },
+  year: {
+    type: mongoose.SchemaTypes.String,
+    required: true,
+    select: false
+  },
+  month: {
     type: mongoose.SchemaTypes.String,
     required: true,
     select: false
   }
 };
-const collectionName = "user"; // Name of the collection of documents
-const userSchema = mongoose.Schema(schema);
-const User = mongoose.model(collectionName, userSchema);
-// Create user
-/*
-User.create({
-  name: name,
-  email: email,
-  password: password
-});
-// Find user by email
-User.findOne({
-  email: email
-});
-// Find user by email with the password field included
-User.findOne({
-  email: email
-}).select("+password");
-*/
+const collectionName = "predictions"; // Name of the collection of documents
+const mySchema = mongoose.Schema(schema);
+const Predictions = mongoose.model(collectionName, mySchema);
 
-
-module.exports = User;
+module.exports = Predictions;

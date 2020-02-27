@@ -1,11 +1,16 @@
-const userController = new Object();
-const User = require('../models/userModel')
+const predictionController = new Object();
+const Predictions = require('../models/prediction-model')
 
 
 
-userController.test = function (){
-  var small = new User({ name: 'small' , email : 'ada' , password : 'adafasdd'});
-  console.log(User.find({}));
+predictionController.getPredictions = function (year){
+  predictions = Predictions.find({year : year},
+    {month: 1, year: 1,
+      fitted: 1 ,
+      actual: 1 ,
+      fitted_std: 1,
+      actual_std: 1})
+  return predictions;
 }
 
-module.exports = userController;
+module.exports = predictionController;
