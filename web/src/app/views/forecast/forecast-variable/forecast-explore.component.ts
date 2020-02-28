@@ -69,7 +69,7 @@ export class ForecastVariableComponent implements OnInit {
         lineTension: 0
       }]);
 
-    this.httpService.getParameterValuesForYear(this.parameter.parameter, this.parameter.year).subscribe(result => {
+    this.httpService.getParameterValuesForYear(this.parameter.parameter, this.parameter.year).subscribe((result : any) => {
       let y_values = [];
       let yhat = [];
 

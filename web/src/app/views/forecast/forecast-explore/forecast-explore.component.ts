@@ -21,6 +21,8 @@ export class ForecastExploreComponent implements OnInit {
   isCollapsed: boolean = false;
   SecondaryisCollapsed: boolean = true;
   TertiaryisCollapsed: boolean = true;
+  yearOnYear: number;
+  monthOnMonthPercentage : number;
 
 
   closeResult: string;
@@ -40,17 +42,16 @@ export class ForecastExploreComponent implements OnInit {
     this.chart.onclickFunc = this.monthClicked;
     this.chart.selectedYear = this.selectedYear;
 
-    this.stacked = [{value: 15, type: 'success', label: '15 %' ,}, {value: 26, type: 'warning', label: '26 %'}];
-    this.stacked1 = [{value: 25, type: 'success', label: '25 %' ,}, {value: 20, type: 'warning', label: '20%'}];
-    this.stacked2  = [{value: 35, type: 'success', label: '35 %' ,}, {value: 16, type: 'warning', label: '16 %'}];
+    this.stacked2 = [ {value: 0, type: 'warning', label: '0 %'}];
+    this.stacked1 = [{value: 0, type: 'success', label: '0 %' ,}, ];
 
     this.selectedYear = "2020";
     this.onYearChange(null);
-
+    this.yearOnYear = 0;
+    this.monthOnMonthPercentage = 0;
   }
 
   monthClicked(evt, datapoints, _this, selectedYear){
-
     if(evt.active && evt.active.length > 0){
       let index = evt.active[0]._index;
       let month = "Jan";
@@ -94,12 +95,35 @@ export class ForecastExploreComponent implements OnInit {
         default :
       }
       _this.httpService.getParameterValuesForMonth(selectedYear, month).subscribe(response => {
-        if(response.data){
-          _this.parametersForTheMonth =  response.data ;
-
+        if(response.data) {
+          _this.parametersForTheMonth =  response.data;
         }
       });
 
+
+      _this.httpService.getPredictions((parseInt(selectedYear) - 1).toString()).subscribe( (lastYearResults : any) => {
+        _this.yearOnYear = isNaN(parseInt(datapoints[index]) - parseInt(lastYearResults.data[index].fitted)) ? 0 : parseInt(datapoints[index]) - parseInt(lastYearResults.data[index].fitted) ;
+        _this.yearOnYear = (100*(_this.yearOnYear / _this.annualForecastTotal)).toFixed(2)
+        if(_this.yearOnYear > 0){
+          _this.stacked1 = [ {value: _this.yearOnYear * 10 , type: 'success', label:''}];
+        }else {
+          _this.stacked1 = [ {value: _this.yearOnYear* 10 *-1, type: 'warning', label:''}];
+        }
+        if(index > 0){
+          _this.monthOnMonthPercentage = (100 * (parseInt(datapoints[index]) - parseInt(datapoints[index-1])) /  parseInt(datapoints[index-1])).toFixed(2);
+        }else{
+          _this.monthOnMonthPercentage = (100 * (parseInt(datapoints[index]) - parseInt(lastYearResults[11])) /  parseInt(lastYearResults[11])).toFixed(2);;
+        }
+
+
+        if(_this.yearOnYear > 0){
+          _this.stacked2 = [ {value: _this.monthOnMonthPercentage, type: 'success', label:''}];
+        }else {
+          _this.stacked2 = [ {value: _this.monthOnMonthPercentage * -1, type: 'warning', label:''}];
+        }
+
+
+      })
     }
   }
 
@@ -192,7 +216,7 @@ export class ForecastExploreComponent implements OnInit {
   }
 
   onYearChange(event){
-    this.httpService.getPredictions(this.selectedYear.toString()).subscribe(result => {
+    this.httpService.getPredictions(this.selectedYear.toString()).subscribe( (result : any)=> {
       let y_values = [];
       let yhat = [];
 
@@ -221,17 +245,16 @@ export class ForecastExploreComponent implements OnInit {
         }];
       }
 
-      debugger;
       this.annualForecastTotal = total;
       this.exportedSoFar = this.systemYear == this.selectedYear ? soFar : total;
 
       this.thisYearsPrediction = result.data;
 
-      this.httpService.getParameterValuesForMonth(this.selectedYear, "Jan").subscribe(response => {
+      this.httpService.getParameterValuesForMonth(this.selectedYear, "Jan").subscribe((response : any)=> {
         if(response.data){
           this.parametersForTheMonth =  response.data ;
         }
-      })
+      });
     });
   }
 }

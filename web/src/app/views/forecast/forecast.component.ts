@@ -20,7 +20,7 @@ export class ForecastComponent implements OnInit {
   ngOnInit(): void {
     this.chart = new TimeSeriesChart();
 
-    this.httpService.getPredictions("2020").subscribe(result => {
+    this.httpService.getPredictions("2020").subscribe((result : any) => {
       let y_values = [];
       let yhat = [];
 
@@ -41,7 +41,7 @@ export class ForecastComponent implements OnInit {
   }
 
   onYearChange(event){
-    this.httpService.getPredictions(this.selectedYear.toString()).subscribe(result => {
+    this.httpService.getPredictions(this.selectedYear.toString()).subscribe((result : any) => {
       let y_values = [];
       let yhat = [];
 

@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpServiceService {
-  url = "http://localhost:3000/api/";
+  /*url = "http://localhost:3000/api/";*/
+  url = "https://glacial-fortress-72466.herokuapp.com/api/";
   constructor(private http: HttpClient) { }
 
   getPredictions(year) {

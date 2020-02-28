@@ -60,12 +60,12 @@
         <small class="text-muted">Achievement : <strong>{{(100*(exportedSoFar/annualForecastTotal)).toFixed(2)+'%'}}</strong> </small>
 
         <br/>
-        <div>Year-on-Year : <strong>25%</strong> </div>
+        <div>Year-on-Year : <strong>{{ yearOnYear}}%</strong> </div>
         <div class="row col-lg-12">
           <progressbar class="progress" [value]="stacked1" [max]="100"></progressbar>
         </div>
 
-        <div>Month-on-Month: <strong>-58%</strong> </div>
+        <div>Month-on-Month: <strong>{{monthOnMonthPercentage}}%</strong> </div>
         <div class="row col-lg-12">
           <progressbar class="progress" [value]="stacked2" [max]="100"></progressbar>
         </div>

@@ -1,12 +1,11 @@
 import {Input} from '@angular/core';
-import {HttpServiceService} from '../../httpservice.service';
 
 export class TimeSeriesChart{
 
   @Input() onclickFunc;
   @Input() selectedYear;
 
-  constructor(private httpService: HttpServiceService){
+  constructor(){
     this.lineChartColours = this.customColors;
   }
 
