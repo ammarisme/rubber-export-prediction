@@ -1,5 +1,5 @@
 
-# Project Summary
+# Shipping Demand Prediction Dashboard (Pytorch / React / NodeJS)
 
 This project focuses on evaluating candidate models using various cross-validation metrics to determine the best model for predicting natural rubber export demand. The deep learning part of the project is developed using PyTorch/Python. The frontend is developed using React, while the backend is developed in Node.js to serve the model.
 
