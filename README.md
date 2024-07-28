@@ -112,6 +112,39 @@ This project focuses on evaluating candidate models using various cross-validati
 For detailed information on the API usage and parameters, refer to the API documentation included in the backend directory.
 
 ---
+## Directory Structure
+
+```plaintext
+|-- .gitignore
+|-- README.md
+|-- backend
+|   |-- app.js
+|   |-- package.json
+|   |-- routes
+|       |-- modelRoutes.js
+|   |-- controllers
+|       |-- modelController.js
+|   |-- models
+|       |-- exportModel.js
+|-- frontend
+|   |-- public
+|       |-- index.html
+|   |-- src
+|       |-- App.js
+|       |-- index.js
+|       |-- components
+|           |-- PredictionForm.js
+|           |-- ResultDisplay.js
+|   |-- package.json
+|-- model
+|   |-- train_model.py
+|   |-- evaluate_model.py
+|   |-- requirements.txt
+|   |-- data
+|       |-- dataset.csv
+|-- config
+|   |-- config.json
+
 
 ## Conclusion
 
